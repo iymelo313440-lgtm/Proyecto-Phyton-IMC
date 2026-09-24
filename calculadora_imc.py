@@ -1,14 +1,15 @@
 # Programa base para calculadora de IMC.
 # En este programa se almacenarán los datos del usuario.
+print("Bienvenido/a a la calculadora de IMC")
 
 # Nombre del usuario (string)
-nombre = input("¿cuál es tu nombre?")
+nombre = input("¿cuál es tu nombre?").title()
 
 # Apellido paterno del usuario (string)
-apellido_paterno = input("¿cuál es tu apellido paterno?")
+apellido_paterno = input("¿cuál es tu apellido paterno?").title()
 
 # Apellido materno del usuario (string)
-apellido_materno = input("¿cuál es tu apellido materno?")
+apellido_materno = input("¿cuál es tu apellido materno?").title()
 
 # Edad del usuario (int)
 edad = int(input("¿cuál es tu edad?"))
@@ -20,7 +21,15 @@ peso = float(input("¿cuál es tu peso?"))
 estatura = float(input("¿cuál es tu estatura?"))
 
 imc = peso / estatura ** 2
-print(imc)
+print(f"""
+Nombre: {nombre}
+Apellido paterno: {apellido_paterno}
+Apellido materno: {apellido_materno}
+Edad: {edad}
+Peso: {peso} kg
+Estatura: {estatura} m
+IMC: {imc:.2f}
+""")
 
-print("Bienvenido/a a la calculadora de IMC")
+
 
